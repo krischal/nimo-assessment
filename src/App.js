@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import LoginScreen from './pages/Login/Login';
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";

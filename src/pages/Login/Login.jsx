@@ -2,7 +2,6 @@ import React, { useState, useContext } from "react";
 import { Container, Button, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import { GlobalContext } from "../../contexts/GlobalContext";
-import CheckboxInput from "../../components/FormFields/CheckboxInput";
 import TextInput from "../../components/FormFields/TextInput";
 import { useForm, Controller } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
