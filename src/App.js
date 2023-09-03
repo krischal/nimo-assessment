@@ -1,39 +1,33 @@
 import logo from './logo.svg';
 import './App.css';
-import HomeScreen from './pages/Home/home';
-import LoginScreen from './pages/Home/Login/login';
+import LoginScreen from './pages/Login/Login';
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import HomeScreen from './pages/Home/Home';
 import Page404 from './pages/404/404';
-import { QueryClient, QueryClientProvider, useQuery } from "@tanstack/react-query";
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-import "./index.css";
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element:<HomeScreen/>,
-  },
-  {
-    path: "/login",
-    element:<LoginScreen/>,
-  },
-  {
-    path: "*",
-    element:<Page404/>,
-  },
-]);
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { GlobalContextProvider } from './contexts/GlobalContext';
+import BottomAlert from './components/Common/BottomAlert';
+import NavBar from './components/NavBar/NavBar';
+import ConfirmationDialog from './components/Common/ConfirmationDialog';
 const queryClient = new QueryClient();
 
-function App() {
+const App =()=> {
+  
   return (
     <QueryClientProvider client={queryClient}>
+      <GlobalContextProvider>
       <div className="App">
-        <RouterProvider router={router} />
+      <BrowserRouter>
+      <Routes>
+        <Route path="/login" element={<LoginScreen />} />
+        <Route path="/" element={<NavBar><HomeScreen /></NavBar>} />
+        <Route path="*" element={<Page404 />} />
+        </Routes>
+    </BrowserRouter>
       </div>
+      <BottomAlert />
+      <ConfirmationDialog />
+      </GlobalContextProvider>
     </QueryClientProvider>
 
   );
