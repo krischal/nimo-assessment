@@ -26,9 +26,7 @@ export const Coin24HrChangePercentage = ({ value }) => (
 );
 
 export const ActionButtons = ({ id, row }) => {
-  const navigate = useNavigate();
-
-  const { pinnedList, removePinnedItem, addPinnedItem, setSelectedCrypto } =
+  const { pinnedList, removePinnedItem, addPinnedItem } =
     useContext(GlobalContext);
   const handleRemovePinnedItem = useCallback(() => {
     removePinnedItem(row);
