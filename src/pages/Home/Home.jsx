@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import { DataGrid } from "@mui/x-data-grid";
 import { useQuery } from "@tanstack/react-query";
 import { api } from "../../hooks/useAPi";
@@ -6,7 +6,6 @@ import Grid from "@mui/material/Grid";
 import cryptoData from "../../assets/lotties/crypto.json";
 import Stack from "@mui/material/Stack";
 import "chartjs-chart-financial";
-import { GlobalContext } from "../../contexts/GlobalContext";
 import PinnedView from "../../components/Home/PinnedView";
 import { columns } from "../../config/dataGridColumns";
 const HomeScreen = () => {
