@@ -3,7 +3,7 @@ import { DataGrid } from "@mui/x-data-grid";
 import { useQuery } from "@tanstack/react-query";
 import { api } from "../../hooks/useAPi";
 import Grid from "@mui/material/Grid";
-import cryptoData from "../../assets/lotties/crypto.json";
+// import cryptoData from "../../assets/lotties/crypto.json";
 import Stack from "@mui/material/Stack";
 import "chartjs-chart-financial";
 import { GlobalContext } from "../../contexts/GlobalContext";
@@ -23,7 +23,7 @@ const HomeScreen = () => {
         {}
       ),
     {
-      enabled: false,
+      enabled: true,
       onSuccess: (res) => {
         console.log(res);
         setCoinsList(res);
@@ -49,7 +49,7 @@ const HomeScreen = () => {
       </Grid>
       <Grid item xs={12}>
         <DataGrid
-          rows={cryptoData}
+          rows={coinsList}
           columns={columns}
           initialState={{
             pagination: {
