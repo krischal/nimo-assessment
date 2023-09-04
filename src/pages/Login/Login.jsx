@@ -20,7 +20,7 @@ const useStyles = makeStyles({
     boxShadow: "0 0 40px rgba(0,0,0,0.3)",
     borderRadius: 8,
     backgroundColor: "#ffffff",
-    marginTop: "30%",
+    marginTop: "15%",
   },
 });
 
