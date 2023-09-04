@@ -5,7 +5,6 @@ import PushPinIcon from "@mui/icons-material/PushPin";
 import Stack from "@mui/material/Stack";
 import { GlobalContext } from "../../contexts/GlobalContext";
 import { CryptoAvatar, PriceChange } from "./CryptoDataView";
-import { useNavigate } from "react-router-dom";
 
 export const CoinImage = ({ src }) => <CryptoAvatar image={src} />;
 
