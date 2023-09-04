@@ -31,7 +31,6 @@ const HomeScreen = () => {
           setCoinsList(cryptoData);
         }
       },
-      on,
     }
   );
 
