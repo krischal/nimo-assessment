@@ -48,7 +48,7 @@ const PinnedView = () => {
         </div>
       </CSSTransition>
     ));
-  }, [pinnedList, removePinnedItem]);
+  }, [pinnedList, removePinnedItem, handleRemove]);
 
   return (
     <TransitionGroup className="crypto-list">{renderedList}</TransitionGroup>

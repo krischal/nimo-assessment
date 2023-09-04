@@ -1,8 +1,6 @@
-import React, { useState } from "react";
-import { Container, Typography } from "@mui/material";
+import React from "react";
+import { Container } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import ErrorOutlineIcon from "@mui/icons-material/ErrorOutline";
-import Snackbar, { SnackbarOrigin } from "@mui/material/Snackbar";
 import pageNotFoundAnimation from "../../assets/lotties/Error404.json";
 import Lottie from "lottie-react";
 const useStyles = makeStyles({

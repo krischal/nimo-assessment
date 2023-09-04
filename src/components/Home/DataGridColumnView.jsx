@@ -1,8 +1,6 @@
 import React, { useContext, useCallback } from "react";
 import Typography from "@mui/material/Typography";
-import Avatar from "@mui/material/Avatar";
 import IconButton from "@mui/material/IconButton";
-import VisibilityIcon from "@mui/icons-material/Visibility";
 import PushPinIcon from "@mui/icons-material/PushPin";
 import Stack from "@mui/material/Stack";
 import { GlobalContext } from "../../contexts/GlobalContext";
@@ -40,10 +38,6 @@ export const ActionButtons = ({ id, row }) => {
     addPinnedItem(row);
   }, [addPinnedItem, row]);
 
-  const handleViewDetails = () => {
-    setSelectedCrypto(row);
-    navigate(`/details/${id}`);
-  };
   return (
     <Stack direction="row" justifyContent={"flex-end"} alignItems={"flex-end"}>
       {!pinnedList.some((item) => item.id === id) ? (

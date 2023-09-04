@@ -10,11 +10,8 @@ import { GlobalContext } from "../../contexts/GlobalContext";
 import PinnedView from "../../components/Home/PinnedView";
 import { columns } from "../../config/dataGridColumns";
 const HomeScreen = () => {
-  const { pinnedList, removePinnedItem, addPinnedItem } =
-    useContext(GlobalContext);
-
   const [coinsList, setCoinsList] = useState({});
-  const { data, refetch, isFetching } = useQuery(
+  const { isFetching } = useQuery(
     ["get-coins-list"],
     () =>
       api(
@@ -54,6 +51,7 @@ const HomeScreen = () => {
         <DataGrid
           rows={coinsList}
           columns={columns}
+          loading={isFetching}
           initialState={{
             pagination: {
               paginationModel: { page: 0, pageSize: 50 },

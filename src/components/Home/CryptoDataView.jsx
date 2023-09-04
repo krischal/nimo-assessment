@@ -25,8 +25,8 @@ export const PriceChange = ({ value, symbol }) => (
       color: value > 0 ? "green" : "red",
     }}
   >
-    {symbol == "$" && "$"} {value}
-    {symbol == "%" && " %"}
+    {symbol === "$" && "$"} {value}
+    {symbol === "%" && " %"}
   </Typography>
 );
 
